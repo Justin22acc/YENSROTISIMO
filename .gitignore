@@ -1,17 +1,41 @@
 wait(4)
-game.StarterGui:SetCore("SendNotification",{Title = "SCRIPT creado por: JAS", Text = "Gracias por usar ;)", Duration = 5})
+bc = BrickColor.new(255, 0, 0)
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+    
+    Text = "[Scripter][JAS]:Script Creado por: JAS";
+    
+    Font = Enum.Font.Highway;
+    
+    Color = bc.Color;
+    
+    FontSize = Enum.FontSize.Size8;
+    })
+wait(5)
+bc = BrickColor.new(234, 0, 255)
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+    
+    Text = "[Tester][JAS]:Hola, Gracias por utilizar mi script";
+    
+    Font = Enum.Font.Highway;
+    
+    Color = bc.Color;
+    
+    FontSize = Enum.FontSize.Size8;
+    })
+wait(5)
+game.StarterGui:SetCore("SendNotification",{Title = "Espera Unos Segundos", Text = "Esto puede demorar", Duration = 5})
 wait(3)
 local args = {
-    [1] = "Soy scripter Mamá",
+    [1] = "El troleo hermano",
     [2] = "All"
 }
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-wait(1)
+wait(2)
 local args = {
-    [1] = "Soy gachatuber Mamá",
+    [1] = "Ahorita funciona we",
     [2] = "All"
 }
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-game.StarterGui:SetCore("SendNotification",{Title = "Usuraio no registrado", Text = "Aprende a programar", Duration = 5})
-wait(5)
+game.StarterGui:SetCore("SendNotification",{Title = "Usuraio No Registrado", Text = "ten tu SPD", Duration = 5})
+wait(4)
     game:GetService("TeleportService"):Teleport(920587237, LocalPlayer)
