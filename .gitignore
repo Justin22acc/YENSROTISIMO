@@ -1,4 +1,4 @@
-wait(4)
+wait(3)
 bc = BrickColor.new(255, 0, 0)
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
     
@@ -24,7 +24,29 @@ game.StarterGui:SetCore("ChatMakeSystemMessage", {
     })
 wait(5)
 game.StarterGui:SetCore("SendNotification",{Title = "Espera Unos Segundos", Text = "Esto puede demorar", Duration = 5})
-wait(3)
+wait(1)
+local args = {
+    [1] = "CP",
+    [2] = false
+}
+
+game:GetService("ReplicatedStorage").RSPackage.Events.GeneralFunction:InvokeServer(unpack(args))
+wait(1)
+local player = game.Players.LocalPlayer.Character
+for i, v in pairs(player:GetChildren()) do
+  if v.Name == "HumanoidRootPart"
+  then for i2, v2 in pairs(v:GetChildren()) do
+	  if v2.Name == "TotalPower"
+	  then for i3, v3 in pairs(v2:GetChildren()) do
+		  if v3.Name == "Num" then
+			  v3.Text = "53.00SpD"
+		  end
+		  end
+		end
+	  end
+  end
+end
+wait(10)
 local args = {
     [1] = "El troleo hermano",
     [2] = "All"
@@ -32,10 +54,10 @@ local args = {
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 wait(2)
 local args = {
-    [1] = "Ahorita funciona we",
+    [1] = "Puro coto no funciona XD",
     [2] = "All"
 }
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
-game.StarterGui:SetCore("SendNotification",{Title = "Usuraio No Registrado", Text = "ten tu SPD", Duration = 5})
+game.StarterGui:SetCore("SendNotification",{Title = "Usuraio No Registrado", Text = "Vete al adopt me XD", Duration = 5})
 wait(4)
     game:GetService("TeleportService"):Teleport(920587237, LocalPlayer)
